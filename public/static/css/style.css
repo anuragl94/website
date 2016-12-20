@@ -1,0 +1,77 @@
+/* 
+    Created on : 20 Dec, 2016, 3:33:36 PM
+    Author     : Anurag Lingam
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.screen {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clearfix {
+    clear: both;
+}
+
+#social-links {
+    padding: 12px;
+    font-size: 2rem;
+}
+
+#social-links .social-link {
+    text-decoration: none;
+    float: right;
+    padding-left: 12px;
+    color: white;
+}
+
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#homescreen {
+    background-color: #89bdd3;
+    color: white;
+    font-size: 4em;
+    font-family: 'Josefin Sans', 'Helvetica';
+}
+
+#name {
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+#name:hover {
+    font-size: 1.4em;
+}
