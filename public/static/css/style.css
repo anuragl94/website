@@ -25,6 +25,23 @@ body {
     overflow: hidden;
 }
 
+.no-select {
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                          not supported by any browser */
+}
+
+@media screen and (max-width: 860px) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
 .text-center {
     text-align: center;
 }
@@ -40,9 +57,34 @@ body {
     clear: both;
 }
 
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    position: absolute;
+    display: inline-block;
+    content: attr(data-tooltip);
+    top: -50%;
+    right: 0%;
+    font-size: 0.4em;
+    background-color: rgba(0,0,0,0.8);
+    padding: 4px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.1s, opacity 0.1s;
+    -webkit-transition: top .25s ease-in-out, opacity .25s ease-in-out;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    top: -80%;
+}
+
 #social-links {
     padding: 12px;
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 
 #social-links .social-link {
@@ -68,11 +110,44 @@ body {
     text-align: center;
 }
 
-#name {
-    transition-duration: 0.2s;
+.animate-on-hover {
+    padding: 64px;
+}
+
+.animate-on-hover > span {
+    transition-duration: 0.3s;
     transition-timing-function: ease;
 }
 
+.animate-on-hover:hover > span {
+    font-size: 0.9em;
+}
+
+.animate-on-hover > span:hover {
+    font-size: 1.1em;
+}
+
+#name {
+    position: relative;
+}
+
+#name::after {
+    content: 'Lingam';
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: bottom 0.3s, opacity 0.2s;
+    -webkit-transition: bottom .25s ease-in-out, opacity .25s ease-in-out;
+}
+
 #name:hover {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    color: #412722;
+}
+
+#name:hover::after {
+    opacity: 1;
+    bottom: -100%;
 }

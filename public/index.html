@@ -4,21 +4,25 @@
         <title>It's that site!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="static/image/favicon.svg">
         <link rel='stylesheet' href='static/css/font-awesome.min.css' />
         <link rel='stylesheet' href='static/css/style.css' />
     </head>
     <body>
-        <div id='homescreen' class='screen'>
-            <div class='centered'>
-                Hi, I'm <span id="name">Anurag</span> :)
+        <div id='homescreen' class='screen no-select'>
+            <div class='centered animate-on-hover'>
+                <span>Hi, </span>
+                <span>I'm </span>
+                <span id="name">Anurag</span>
+                <span class='hide-on-tablet'> :)</span>
             </div>
             <div id='footer'>
                 <div id='social-links'>
                     <a class='social-link' href='https://www.facebook.com/the.lethargic.dog'>
-                        <i class="fa fa-facebook-square"></i>
+                        <i class="fa fa-facebook-square" data-tooltip='Facebook'></i>
                     </a>
                     <a class='social-link' href='https://www.twitter.com/thelethargicdog'>
-                        <i class="fa fa-twitter-square"></i>
+                        <i class="fa fa-twitter-square" data-tooltip='Twitter'></i>
                     </a>
                     <div class='clearfix'></div>
                 </div>
