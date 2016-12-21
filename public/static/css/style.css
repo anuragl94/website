@@ -65,11 +65,12 @@ body {
     position: absolute;
     display: inline-block;
     content: attr(data-tooltip);
+    font-family: 'Josefin Sans', 'Helvetica';
     top: -50%;
     right: 0%;
     font-size: 0.4em;
     background-color: rgba(0,0,0,0.8);
-    padding: 4px;
+    padding: 6px 4px 2px 4px;
     border-radius: 4px;
     opacity: 0;
     pointer-events: none;
