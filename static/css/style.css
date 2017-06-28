@@ -2,7 +2,6 @@
     Created on : 20 Dec, 2016, 3:33:36 PM
     Author     : Anurag Lingam
 */
-
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
 
 html {
@@ -29,10 +28,10 @@ body {
     cursor: default;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
-    -khtml-user-select: none; /* Konqueror */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
                           not supported by any browser */
 }
 
@@ -68,13 +67,13 @@ body {
     font-family: 'Josefin Sans', 'Helvetica';
     top: -50%;
     right: 0%;
-    font-size: 0.4em;
-    background-color: rgba(0,0,0,0.8);
+    font-size: .4em;
+    background-color: rgba(0, 0, 0, .8);
     padding: 6px 4px 2px 4px;
     border-radius: 4px;
     opacity: 0;
     pointer-events: none;
-    transition: top 0.1s, opacity 0.1s;
+            transition: top .1s, opacity .1s;
     -webkit-transition: top .25s ease-in-out, opacity .25s ease-in-out;
 }
 
@@ -95,12 +94,16 @@ body {
     color: white;
 }
 
+#side-links .social-link i {
+    line-height: 32px;
+}
+
 #footer {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, .1);
 }
 
 #homescreen {
@@ -116,12 +119,12 @@ body {
 }
 
 .animate-on-hover > span {
-    transition-duration: 0.3s;
+    transition-duration: .3s;
     transition-timing-function: ease;
 }
 
 .animate-on-hover:hover > span {
-    font-size: 0.9em;
+    font-size: .9em;
 }
 
 .animate-on-hover > span:hover {
@@ -139,12 +142,12 @@ body {
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    transition: bottom 0.25s, opacity 0.25s;
+    transition: bottom .25s, opacity .25s;
 }
 
 #name:hover {
     font-size: 1.2em;
-    color: #583E23;
+    color: #583e23;
 }
 
 #name:hover::after {
@@ -153,13 +156,88 @@ body {
 }
 
 .extra-space {
-  display: block;
-  content: '';
-  height: 100px;
-  max-height: 0;
-  transition: max-height 0.25s ease-in;
+    display: block;
+    content: '';
+    height: 100px;
+    max-height: 0;
+    transition: max-height .25s ease-in;
 }
 
 #name:hover + .extra-space {
-  max-height: 100px;
+    max-height: 100px;
+}
+
+#side-links {
+    position: absolute;
+    top: 36px;
+    right: 12px;
+    transition: background-color .2s ease-in-out, max-height 1s linear;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 26px;
+    /* Hidden contents */
+    max-height: 52px;
+    overflow: hidden;
+}
+
+#side-links .toggle-button {
+    font-size: 20px;
+    border-radius: 50%;
+    display: block;
+    height: 36px;
+    width: 36px;
+    line-height: 40px;
+    margin: 8px;
+    color: #67d3ea;
+    background-color: white;
+    transition-duration: 0.2s;
+}
+
+#side-links:hover {
+    background-color: rgba(0, 0, 0, .1);
+    max-height: 999px;
+}
+
+#side-links:hover .toggle-button {
+    color: white;
+    background-color: transparent;
+    transform: rotate(-90deg);
+}
+
+#side-links:hover .social-link {
+  opacity: 1;
+}
+
+#side-links .social-link {
+    text-decoration: none;
+    color: #67d3ea;
+    font-size: 20px;
+    border-radius: 50%;
+    display: block;
+    height: 36px;
+    width: 36px;
+    line-height: 40px;
+    margin: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#side-links .social-link:hover {
+    color: white;
+}
+
+.sl-linkedin, .sl-twitter, .sl-facebook {
+    background-color: white;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.sl-linkedin:hover {
+    background-color: #0077b5;
+}
+
+.sl-twitter:hover {
+    background-color: #1da1f2;
+}
+
+.sl-facebook:hover {
+    background-color: #3b5998;
 }
