@@ -35,12 +35,6 @@ body {
                           not supported by any browser */
 }
 
-@media screen and (max-width: 860px) {
-    .hide-on-tablet {
-        display: none;
-    }
-}
-
 .text-center {
     text-align: center;
 }
@@ -189,7 +183,7 @@ body {
     margin: 8px;
     color: #67d3ea;
     background-color: white;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 #side-links:hover {
@@ -204,10 +198,12 @@ body {
 }
 
 #side-links:hover .social-link {
-  opacity: 1;
+    opacity: 1;
 }
 
 #side-links .social-link {
+    position: relative;
+    bottom: 0;
     text-decoration: none;
     color: #67d3ea;
     font-size: 20px;
@@ -218,10 +214,16 @@ body {
     line-height: 40px;
     margin: 8px;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity .2s ease-in-out, bottom .1s ease-in-out, background 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
 #side-links .social-link:hover {
+    color: white;
+    bottom: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+#side-links .social-link:hover i {
     color: white;
 }
 
