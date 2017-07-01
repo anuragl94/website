@@ -11,6 +11,9 @@ html {
 body {
     padding: 0;
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Josefin Sans', 'Helvetica';
 }
 
 *, *:before, *:after {
@@ -58,7 +61,6 @@ body {
     position: absolute;
     display: inline-block;
     content: attr(data-tooltip);
-    font-family: 'Josefin Sans', 'Helvetica';
     top: -50%;
     right: 0%;
     font-size: .4em;
@@ -74,18 +76,6 @@ body {
 [data-tooltip]:hover::after {
     opacity: 1;
     top: -80%;
-}
-
-#social-links {
-    padding: 12px;
-    font-size: 2.4rem;
-}
-
-#social-links .social-link {
-    text-decoration: none;
-    float: right;
-    padding-left: 12px;
-    color: white;
 }
 
 #side-links .social-link i {
@@ -104,7 +94,6 @@ body {
     background-color: #67d3ea;
     color: white;
     font-size: 4em;
-    font-family: 'Josefin Sans', 'Helvetica';
     text-align: center;
 }
 
@@ -162,12 +151,14 @@ body {
 }
 
 #side-links {
-    position: absolute;
+    position: fixed;
+    z-index: 1000;
     top: 36px;
     right: 12px;
     transition: background-color .2s ease-in-out, max-height 1s linear;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 26px;
+    text-align: center;
     /* Hidden contents */
     max-height: 52px;
     overflow: hidden;
@@ -181,7 +172,7 @@ body {
     width: 36px;
     line-height: 40px;
     margin: 8px;
-    color: #67d3ea;
+    color: rgba(0,0,0,0.2);
     background-color: white;
     transition-duration: .2s;
 }
@@ -205,7 +196,6 @@ body {
     position: relative;
     bottom: 0;
     text-decoration: none;
-    color: #67d3ea;
     font-size: 20px;
     border-radius: 50%;
     display: block;
@@ -232,14 +222,23 @@ body {
     transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 
+.sl-linkedin {
+  color: #0077b5;
+}
 .sl-linkedin:hover {
     background-color: #0077b5;
 }
 
+.sl-twitter {
+    color: #1da1f2;
+}
 .sl-twitter:hover {
     background-color: #1da1f2;
 }
 
+.sl-facebook {
+    color: #3b5998;
+}
 .sl-facebook:hover {
     background-color: #3b5998;
 }
