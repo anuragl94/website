@@ -92,6 +92,7 @@ body {
 
 #homescreen {
     background-color: #67d3ea;
+    background: radial-gradient(circle at bottom, rgba(103, 211, 234, 0.4) 0%, rgb(103, 211, 234) 100%);
     color: white;
     font-size: 4em;
     text-align: center;
