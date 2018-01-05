@@ -62,7 +62,7 @@ body {
 /* Home screen start */
 #homescreen {
     background-color: #67d3ea;
-    background: radial-gradient(circle at bottom, rgb(194, 237, 247) 0%, rgb(103, 211, 234) 100%);
+    background: radial-gradient(circle at bottom, rgb(194, 237, 247) 0%, rgb(23, 145, 171) 100%);
     color: white;
     font-size: 4em;
     text-align: center;
@@ -109,9 +109,46 @@ body {
 }
 /* Home screen end */
 
+/* About screen */
+#aboutscreen {
+    background-color: #c0d33e;
+    background: linear-gradient(to bottom, #a4b720 0%, #c0d33e 100%);
+}
+.hover-to-reveal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 24px;
+    color: white;
+    transition: font 0.2s ease-in-out;
+}
+.hover-to-reveal:hover {
+    font-size: 28px;
+}
+.hover-to-reveal > .hover-text {
+    flex: 0 1 100%;
+    page-break-after: always;
+}
+.hover-to-reveal > .hover-to-reveal {
+    margin-top: 12px;
+    position: relative;
+    opacity: 0;
+    top: -1em;
+    transition: opacity 0.2s ease-in-out, top 0.2s ease-in-out;
+}
+.hover-to-reveal:hover > .hover-to-reveal {
+    opacity: 1;
+    top: 0;
+}
+/* About screen end */
+
 /* Awards screen start */
 #awardscreen {
     background-color: #333333;
+}
+
+#trophy {
+    color: #ecbf1a;
 }
 /* Awards screen end */
 
@@ -248,7 +285,7 @@ body {
 }
 
 .page-link:first-of-type {
-    margin-top: 20px;
+    margin-top: 36px;
 }
 
 .page-link-radio-mock {
